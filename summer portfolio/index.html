@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madou Yansane's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .floating-tab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px; 
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-tab p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Welcome to Madou Yansane's Portfolio</h1>
+        <img src="images/hero-background.jpg" alt="Hero Image">
+    </section>
+
+
+    <!-- Floating Tab -->
+    <div class="floating-tab">
+        <p>Spent the summer learning HTML, CSS, and a bit of JavaScript!</p>
+    </div>
+
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <img src="images/profile-picture.jpg" alt="Madou Yansane">
+            <p>Hello! I'm Madou Yansane, born in 2008 and currently living in Richmond, California. I'm a student at Richmond High School (RHS), where I'm learning Python and HTML. I'm passionate about technology and coding, and I'm excited to showcase my skills and projects through this portfolio.</p>
+            <p>My journey into programming has been both challenging and rewarding. I've been focusing on web development and programming with Python, and I'm eager to learn and grow in these fields. My goal is to build innovative solutions and contribute to exciting projects.</p>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2>My Work</h2>
+            <div>
+                <h3>Project 1</h3>
+                <img src="images/project1.jpg" alt="Project 1 Screenshot">
+                <p>This project showcases my ability to create responsive web designs and implement interactive features using HTML and CSS.</p>
+            </div>
+            <div>
+                <h3>Replit</h3>
+                <img src="images/project2.jpg" alt="Project 2 Screenshot">
+                <p>In this project, I used Python to practice and develop my understanding of programming concepts and problem-solving skills.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Madou Yansane.</p>
+        <ul>
+            <li><a href="https://github.com/yourprofile" target="_blank">Github</a></li>
+        </ul>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tab = document.querySelector('.floating-tab');
+            // Example: Make the tab disappear after 5 seconds
+            setTimeout(() => {
+                tab.style.display = 'none';
+            }, 5000); // Adjust timing as needed
+        });
+    </script>
+</body>
+</html>
